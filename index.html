@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TAN Solutions | CCTV & Networking Services in Madurai</title>
+
+    <meta name="description"
+          content="TAN Solutions Madurai - CCTV installation, networking, Wi-Fi, modem, router and maintenance services.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #07152f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 7%;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #00c6ff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00c6ff;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 7%;
+            color: white;
+            background:
+                linear-gradient(rgba(3, 16, 40, 0.88), rgba(3, 16, 40, 0.88)),
+                linear-gradient(135deg, #07152f, #003d6b);
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #00c6ff;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #d9e6f2;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .call-btn {
+            background: #00c6ff;
+            color: #07152f;
+        }
+
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+        /* COMMON */
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #07152f;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* SERVICES */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #07152f;
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        /* ABOUT */
+        .about {
+            background: #07152f;
+            color: white;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            color: #d7e2ed;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            list-style: none;
+        }
+
+        .features li {
+            margin: 12px 0;
+            font-size: 17px;
+        }
+
+        /* WHY US */
+        .why-us {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            background: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .why-card h3 {
+            margin: 12px 0 5px;
+            color: #07152f;
+        }
+
+        /* CONTACT */
+        .contact-section {
+            background: #eef5fa;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: #07152f;
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .contact-info h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 18px 0;
+            color: #dbe6ef;
+        }
+
+        .contact-info a {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            outline: none;
+        }
+
+        .contact-form textarea {
+            height: 130px;
+            resize: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            background: #07152f;
+            color: white;
+            padding: 14px;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .submit-btn:hover {
+            background: #00a8df;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #030b1c;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer span {
+            color: #00c6ff;
+        }
+
+        /* FLOATING WHATSAPP */
+        .floating-whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: #25d366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 28px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+            z-index: 999;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                min-height: 80vh;
+                padding: 50px 6%;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .services {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .why-us {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .services,
+            .why-us {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">TAN <span>Solutions</span></div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Smart Security &amp;
+            <span>Networking Solutions</span>
+        </h1>
+
+        <p>
+            Professional CCTV, Networking, Wi-Fi, Modem &amp;
+            Router installation and service in Madurai.
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn call-btn" href="tel:9876543210">
+                📞 Call Now
+            </a>
+
+            <a class="btn whatsapp-btn"
+               href="https://wa.me/919876543210?text=Hello%20TAN%20Solutions,%20I%20need%20your%20service."
+               target="_blank">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+    <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Complete security and networking solutions</p>
+    </div>
+
+    <div class="services">
+
+        <div class="service-card">
+            <div class="service-icon">📹</div>
+            <h3>CCTV Installation</h3>
+            <p>
+                Professional CCTV camera installation
+                for homes, shops and offices.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🔧</div>
+            <h3>CCTV Repair</h3>
+            <p>
+                Camera troubleshooting, repair and
+                regular maintenance services.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🌐</div>
+            <h3>Networking</h3>
+            <p>
+                LAN cabling, network setup and
+                office networking solutions.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📡</div>
+            <h3>Wi-Fi Setup</h3>
+            <p>
+                Wi-Fi installation, configuration and
+                connectivity troubleshooting.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">📶</div>
+            <h3>Modem &amp; Router</h3>
+            <p>
+                Router and modem configuration,
+                setup and troubleshooting.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🛠️</div>
+            <h3>AMC &amp; Maintenance</h3>
+            <p>
+                Regular maintenance and support for
+                CCTV and networking systems.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <div class="about-container">
+
+        <div>
+            <h2>About TAN Solutions</h2>
+
+            <p>
+                TAN Solutions provides CCTV and networking
+                services in Madurai. We help homes, shops,
+                offices and businesses with reliable security
+                and network solutions.
+            </p>
+
+            <p>
+                From CCTV installation to router configuration
+                and network troubleshooting, we provide
+                complete technical support.
+            </p>
+        </div>
+
+        <div>
+
+            <ul class="features">
+                <li>✅ CCTV Installation &amp; Service</li>
+                <li>✅ LAN &amp; Network Setup</li>
+                <li>✅ Wi-Fi &amp; Router Configuration</li>
+                <li>✅ Modem Installation</li>
+                <li>✅ Troubleshooting &amp; Maintenance</li>
+                <li>✅ Service in Madurai</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY US -->
+<section>
+
+    <div class="section-title">
+        <h2>Why Choose Us?</h2>
+        <p>Reliable service for your security and network needs</p>
+    </div>
+
+    <div class="why-us">
+
+        <div class="why-card">
+            <div style="font-size:40px;">⚡</div>
+            <h3>Quick Service</h3>
+            <p>Fast response for service enquiries.</p>
+        </div>
+
+        <div class="why-card">
+            <div style="font-size:40px;">🛠️</div>
+            <h3>Professional</h3>
+            <p>Quality installation and technical support.</p>
+        </div>
+
+        <div class="why-card">
+            <div style="font-size:40px;">🔒</div>
+            <h3>Security</h3>
+            <p>Solutions designed for better security.</p>
+        </div>
+
+        <div class="why-card">
+            <div style="font-size:40px;">📞</div>
+            <h3>Support</h3>
+            <p>Easy contact through phone and WhatsApp.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+
+    <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>Need CCTV or Networking service?</p>
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <h3>TAN Solutions</h3>
+
+            <p>
+                📍 <strong>Location:</strong><br>
+                Madurai, Tamil Nadu
+            </p>
+
+            <p>
+                📞 <strong>Phone:</strong><br>
+                <a href="tel:9876543210">
+                    9876543210
+                </a>
+            </p>
+
+            <p>
+                💬 <strong>WhatsApp:</strong><br>
+                <a href="https://wa.me/919876543210"
+                   target="_blank">
+                    Chat on WhatsApp
+                </a>
+            </p>
+
+            <p>
+                🕒 <strong>Service:</strong><br>
+                CCTV | Networking | Wi-Fi | Modem | Router
+            </p>
+
+        </div>
+
+
+        <div class="contact-form">
+
+            <form onsubmit="sendWhatsApp(event)">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number"
+                    required
+                >
+
+                <textarea
+                    id="message"
+                    placeholder="Tell us about your requirement..."
+                    required
+                ></textarea>
+
+                <button class="submit-btn" type="submit">
+                    Send Enquiry on WhatsApp
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 <span>TAN Solutions</span>.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        CCTV | Networking | Wi-Fi | Modem | Router
+    </p>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+<a
+    class="floating-whatsapp"
+    href="https://wa.me/919876543210"
+    target="_blank"
+    aria-label="WhatsApp">
+    💬
+</a>
+
+
+<script>
+
+function sendWhatsApp(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    const text =
+        "Hello TAN Solutions,%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Phone: " + encodeURIComponent(phone) + "%0A" +
+        "Requirement: " + encodeURIComponent(message);
+
+    const whatsappURL =
+        "https://wa.me/919876543210?text=" + text;
+
+    window.open(whatsappURL, "_blank");
+}
+
+</script>
+
+</body>
+</html>
